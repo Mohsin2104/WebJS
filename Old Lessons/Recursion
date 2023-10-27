@@ -1,0 +1,18 @@
+//RECURSION Notes
+
+// 1-function definition
+// 2-Base condition -upon which the recursive call terminates
+// 3-recursive call
+
+//RECURSION
+
+// var count = 0;
+// function recursive(){
+//     count = count + 1
+//     if(count === 20) {
+//         return
+//     }
+//     console.log("Hi");
+//     recursive()
+// }
+// recursive()

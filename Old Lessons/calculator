@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+    <style>
+      body {
+        font-size: 30px;
+      }
+
+      .display_screen {
+        border: 1px solid black;
+        min-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="displayScreen" class="display_screen">
+        Enter Number
+      </div>
+      <div class="btn_holder">
+        <button onclick="clickBtn(1)">1</button>
+        <button onclick="clickBtn(2)">2</button>
+        <button onclick="clickBtn(3)">3</button>
+        <button onclick="clickBtn(4)">4</button>
+        <button onclick="clickBtn(5)">5</button>
+        <button onclick="clickBtn(6)">6</button>
+        <button onclick="clickBtn(7)">7</button>
+        <button onclick="clickBtn(8)">8</button>
+        <button onclick="clickBtn(9)">9</button>
+        <button onclick="clickBtn(0)">0</button>
+        <button onclick="clickBtn('+')">+</button>
+        <button onclick="clickBtn('-')">-</button>
+        <button onclick="clickBtn('/')">/</button>
+        <button onclick="clickBtn('*')">*</button>
+        <button onclick="displayResult('=')">=</button>
+      </div>
+    </div>
+      
+    <script>
+        console.log("connected")
+
+        var displayValue = "";
+        var displayNode = document.getElementById("displayScreen")
+
+        function clickBtn(number) {
+            displayValue += number
+            displayNode.innerHTML = `<p>${displayValue}</p>`
+            console.log("Clicked", displayNode);
+        }
+
+        function displayResult() {
+            var result = eval(displayValue)
+            displayNode.innerHTML = `<p>${result}</p>`
+        }
+
+
+    </script>
+  </body>
+</html>
